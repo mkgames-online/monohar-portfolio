@@ -1,4 +1,5 @@
 import profileImage from "./assets/images/monohar.png";
+import HeroBackground from "./components/HeroBackground";
 export default function GameDevPortfolio() {
   const navItems = ["About", "Projects", "Skills", "Contact"];
 
@@ -49,8 +50,10 @@ export default function GameDevPortfolio() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#07111a] text-white overflow-x-hidden scroll-smooth">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_15%,rgba(0,255,200,0.16),transparent_22%),radial-gradient(circle_at_80%_45%,rgba(0,225,255,0.18),transparent_18%),linear-gradient(90deg,#07111a,#081522,#0b1320)]" />
+    <div className="min-h-screen bg-[#07111a] text-white overflow-x-hidden scroll-smooth relative">
+    <HeroBackground />
+
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_15%,rgba(0,255,200,0.16),transparent_22%),radial-gradient(circle_at_80%_45%,rgba(0,225,255,0.18),transparent_18%),linear-gradient(90deg,#07111a,#081522,#0b1320)] opacity-20 pointer-events-none" />
 
       <div className="relative z-10">
         <header className="sticky top-0 z-30 backdrop-blur-xl bg-[#07111a]/70 border-b border-white/5">
@@ -99,8 +102,7 @@ export default function GameDevPortfolio() {
                 </h2>
 
                 <p className="mt-8 max-w-2xl text-lg text-white/70 leading-8">
-                  I am <span className="text-white font-semibold">Monohar Karmakar</span>, a
-                  <span className="text-cyan-300 font-semibold"> Unity & Unreal Specialist</span>
+                  I am <span className="font-semibold text-white">Monohar Karmakar</span>, a <span className="text-cyan-300 font-medium">Unity & Unreal Specialist</span>{" "}
                   focused on game development, real-time systems, immersive learning, and interactive
                   experiences. I build gameplay foundations, teach industry-aligned workflows, and explore
                   scalable multiplayer XR experiences.
@@ -142,7 +144,7 @@ export default function GameDevPortfolio() {
                       className="h-full w-full object-cover rounded-full"
                     />
                   </div>
-                  <div className="absolute bottom-7 right-3 rounded-xl bg-cyan-400/10 border border-cyan-400/30 px-4 py-2 text-cyan-300 text-sm">
+                  <div className="absolute bottom-0.6 right-0.5 rounded-2xl border border-cyan-300/30 bg-cyan-400/10 px-6 py-3 text-cyan-200 backdrop-blur-md shadow-[0_0_30px_rgba(34,211,238,0.15)]">
                     Multiplayer XR
                   </div>
                 </div>
